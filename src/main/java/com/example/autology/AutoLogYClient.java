@@ -12,7 +12,8 @@ import net.minecraft.text.Text;
 
 public class AutoLogYClient implements ClientModInitializer {
     private static final double LOG_Y = -5.0;
-    private static final int RECONNECT_DELAY_TICKS = 5; // 5 ticks = 0.25s
+    private static final double REARM_Y = 30.0;
+    private static final int RECONNECT_DELAY_TICKS = 6; // 6 ticks = 0.3s
 
     private static ServerInfo pendingServer = null;
     private static int ticksLeft = 0;
@@ -41,7 +42,8 @@ public class AutoLogYClient implements ClientModInitializer {
             }
 
             double y = client.player.getY();
-            if (y > LOG_Y) {
+
+            if (y >= REARM_Y) {
                 armed = true;
             }
 
