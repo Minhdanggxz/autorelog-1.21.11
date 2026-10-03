@@ -13,7 +13,7 @@ import net.minecraft.text.Text;
 public class AutoLogYClient implements ClientModInitializer {
     private static final double LOG_Y = -5.0;
     private static final double REARM_Y = 30.0;
-    private static final int RECONNECT_DELAY_TICKS = 6; // 6 ticks = 0.3s
+    private static final int RECONNECT_DELAY_TICKS = 10; // 10 ticks = 0.5s
 
     private static ServerInfo pendingServer = null;
     private static int ticksLeft = 0;
